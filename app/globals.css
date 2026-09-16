@@ -1,0 +1,149 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* ── Primary Brand ── */
+  --color-primary: #1A7A4A;
+  --color-primary-dark: #145C38;
+  --color-primary-light: #E8F5EE;
+  --color-primary-mid: #2D9E61;
+
+  /* ── Secondary Brand ── */
+  --color-secondary: #5B2D8E;
+  --color-secondary-light: #F3EEF9;
+
+  /* ── Gradients ── */
+  --gradient-hero: linear-gradient(135deg, #1A7A4A 0%, #2D9E61 50%, #3DB574 100%);
+  --gradient-hero-subtle: linear-gradient(135deg, #E8F5EE 0%, #F0FAF4 50%, #FFFFFF 100%);
+  --gradient-card: linear-gradient(145deg, #FFFFFF 0%, #F4F9F6 100%);
+  --gradient-section: linear-gradient(180deg, #F4F9F6 0%, #FFFFFF 100%);
+  --gradient-cta: linear-gradient(135deg, #145C38 0%, #1A7A4A 50%, #2D9E61 100%);
+  --gradient-purple-green: linear-gradient(135deg, #5B2D8E 0%, #1A7A4A 100%);
+
+  /* ── Neutral Scale ── */
+  --color-bg: #FFFFFF;
+  --color-bg-secondary: #F4F9F6;
+  --color-bg-tertiary: #EBF4EF;
+  --color-surface: #FFFFFF;
+  --color-border: #D1E8DB;
+  --color-border-strong: #A8CDB8;
+
+  /* ── Text ── */
+  --color-text-primary: #0F1C14;
+  --color-text-secondary: #3D5247;
+  --color-text-muted: #7A9485;
+  --color-text-inverse: #FFFFFF;
+
+  /* ── Semantic ── */
+  --color-success: #1A7A4A;
+  --color-warning: #D97706;
+  --color-error: #DC2626;
+  --color-info: #0369A1;
+
+  /* ── Shadows ── */
+  --shadow-sm: 0 1px 3px rgba(26, 122, 74, 0.08);
+  --shadow-md: 0 4px 16px rgba(26, 122, 74, 0.12);
+  --shadow-lg: 0 8px 32px rgba(26, 122, 74, 0.16);
+  --shadow-xl: 0 16px 48px rgba(26, 122, 74, 0.20);
+
+  /* ── Radius ── */
+  --radius-sm: 6px;
+  --radius-md: 12px;
+  --radius-lg: 20px;
+  --radius-xl: 32px;
+  --radius-full: 9999px;
+
+  /* ── Spacing ── */
+  --section-padding-y: 96px;
+  --section-padding-x: 24px;
+  --container-max: 1200px;
+
+  /* ── Animation ── */
+  --transition-fast: 150ms ease;
+  --transition-base: 250ms ease;
+  --transition-slow: 400ms ease;
+
+  /* ── Typography ── */
+  --font-display: 'Plus Jakarta Sans', sans-serif;
+  --font-body: 'Inter', sans-serif;
+
+  --text-xs: 0.75rem;
+  --text-sm: 0.875rem;
+  --text-base: 1rem;
+  --text-lg: 1.125rem;
+  --text-xl: 1.25rem;
+  --text-2xl: 1.5rem;
+  --text-3xl: 1.875rem;
+  --text-4xl: 2.25rem;
+  --text-5xl: 3rem;
+  --text-6xl: 3.75rem;
+  --text-7xl: 4.5rem;
+
+  --leading-tight: 1.2;
+  --leading-snug: 1.35;
+  --leading-normal: 1.6;
+  --leading-relaxed: 1.75;
+
+  /* ── shadcn/ui tokens (green-aligned) ── */
+  --background: 0 0% 100%;
+  --foreground: 150 28% 8%;
+  --card: 0 0% 100%;
+  --card-foreground: 150 28% 8%;
+  --popover: 0 0% 100%;
+  --popover-foreground: 150 28% 8%;
+  --primary: 150 64% 29%;
+  --primary-foreground: 0 0% 100%;
+  --secondary: 148 30% 95%;
+  --secondary-foreground: 150 28% 8%;
+  --muted: 148 30% 95%;
+  --muted-foreground: 150 14% 53%;
+  --accent: 148 30% 95%;
+  --accent-foreground: 150 28% 8%;
+  --destructive: 0 84% 60%;
+  --destructive-foreground: 0 0% 98%;
+  --border: 148 40% 85%;
+  --input: 148 40% 85%;
+  --ring: 150 64% 29%;
+  --radius: 0.75rem;
+
+  --chart-1: 150 64% 29%;
+  --chart-2: 270 52% 37%;
+  --chart-3: 197 37% 24%;
+  --chart-4: 43 74% 66%;
+  --chart-5: 27 87% 67%;
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-marquee {
+  animation: marquee 32s linear infinite;
+  will-change: transform;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-marquee {
+    animation: none;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-family: var(--font-body);
+    background-color: var(--color-bg);
+  }
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-display);
+  }
+}
