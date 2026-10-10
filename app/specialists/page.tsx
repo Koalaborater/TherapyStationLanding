@@ -20,50 +20,51 @@ interface Consultant {
 }
 
 const consultants: Consultant[] = [
-  {
-    name: 'Mohammad Nasir Uddin',
-    badge: 'Chief Consultant',
-    title: 'Physiotherapy & Speech Therapy',
-    bio: "Leads Therapy Station's physiotherapy and speech therapy services as Chief Consultant, combining a senior academic career in physiotherapy education with over a decade of hands-on clinical practice. Author of eleven physiotherapy lecture-note sets used across the BPT curriculum, with a strong focus on evidence-based teaching and patient care.",
-    credentials: [
-      'Assoc. Professor & Head, Physiotherapy, State College of Health Science',
-      'BPT — NITOR, University of Dhaka',
-      "Master's in Speech & Language Pathology, University of Dhaka",
-      'M.Phil',
-      'Author of 11 physiotherapy lecture-note sets for the BPT curriculum',
-    ],
-    experience: '13+ years at Therapy Station',
-    photo: '/specialists/mohammad-nasir-uddin.jpg',
-  },
-  {
-    name: 'Md. Rafiqul Islam',
-    badge: 'Consultant — Musculoskeletal',
-    title: 'Orthopedic Medicine & Sports Medicine Specialist',
-    bio: 'Specialises in assessing and treating musculoskeletal disorders — from acute and chronic pain to sports injuries and degenerative conditions of the spine and extremities. Experienced in managing complex cases involving the spine, shoulder, and lower limbs, with a patient-first, empathetic approach to care.',
-    credentials: [
-      'Assistant Professor & Head, Physiotherapy, State College of Health Science',
-      'BSc Physiotherapy — SCHS/BHPI, University of Dhaka (2016)',
-      'MSc Physiotherapy — SCHS/BHPI, University of Dhaka (2023)',
-      'Diploma, Orthopaedic Medicine — Global Cyriax Institute, Belgium (2016)',
-      "Master's in Speech & Language Pathology",
-      'Certified: Shoulder Symptom Modification Procedure (SSMP, UK) · Mulligan Concept (India) · Dry Needling (MSA) · Sports Taping (BCB)',
-    ],
-    experience: '10+ years professional experience',
-    photo: '/specialists/md-rafiqul-islam.jpg',
-  },
-  {
-    name: 'Songita Hossain Sithi',
-    badge: 'Consultant — Biophysical Therapy',
-    title: 'Biophysical Therapy Specialist',
-    bio: 'Specialises in biophysical therapy, combining physiotherapy and biophysical modalities with postgraduate training in speech and language therapy for a well-rounded approach to patient recovery. Part of the Therapy Station clinical team for over eight years.',
-    credentials: [
-      'BPT — SCHS, University of Dhaka',
-      'PGD (BioPT)',
-      'Masters in Speech and Language Therapy, University of Dhaka',
-    ],
-    experience: '8+ years at Therapy Station',
-    photo: '/specialists/songita-hossain-sithi.jpg',
-  },
+    {
+        name: "Mohammad Nasir Uddin",
+        badge: "Chief Consultant",
+        title: "Physiotherapy & Speech Therapy",
+        bio: "Leads Therapy Station's physiotherapy and speech therapy services as Chief Consultant, combining a senior academic career in physiotherapy education with over a decade of hands-on clinical practice. Author of eleven physiotherapy lecture-note sets used across the BPT curriculum, with a strong focus on evidence-based teaching and patient care.",
+        credentials: [
+            "Assoc. Professor & Head, Physiotherapy, State College of Health Sciences",
+            "BPT — NITOR, University of Dhaka",
+            "Masters in Population Sciences, University of Dhaka",
+            "Master's in Speech & Language Pathology, University of Dhaka",
+            "M.Phil, University of Dhaka",
+            "Author of 11 physiotherapy lecture-note sets for the BPT curriculum",
+        ],
+        experience: "22+ years at Therapy Station",
+        photo: "/specialists/mohammad-nasir-uddin.jpg",
+    },
+    {
+        name: "Md. Rafiqul Islam",
+        badge: "Consultant — Musculoskeletal",
+        title: "Orthopedic Medicine & Sports Medicine Specialist",
+        bio: "Specialises in assessing and treating musculoskeletal disorders — from acute and chronic pain to sports injuries and degenerative conditions of the spine and extremities. Experienced in managing complex cases involving the spine, shoulder, and lower limbs, with a patient-first, empathetic approach to care.",
+        credentials: [
+            "Assistant Professor, Physiotherapy, State College of Health Sciences",
+            "BSc in Physiotherapy — SCHS, University of Dhaka (2016)",
+            "MSc in Physiotherapy — BHPI-CRP, University of Dhaka (2023)",
+            "Diploma, Orthopaedic Medicine — Global Cyriax Institute, Belgium (2016)",
+            "Master's in Speech & Language Pathology",
+            "Certified: Shoulder Symptom Modification Procedure (SSMP, UK) · Mulligan Concept (India) · Dry Needling (MSA) · Sports Taping (BCB)",
+        ],
+        experience: "10+ years professional experience",
+        photo: "/specialists/md-rafiqul-islam.jpg",
+    },
+    {
+        name: "Songita Hossain Sithi",
+        badge: "Consultant — Biophysical Therapy",
+        title: "Biophysical Therapy Specialist",
+        bio: "Specialises in biophysical therapy, combining physiotherapy and biophysical modalities with postgraduate training in speech and language therapy for a well-rounded approach to patient recovery. Part of the Therapy Station clinical team for over eight years.",
+        credentials: [
+            "BPT — SCHS, University of Dhaka",
+            "PGD (BioPT)",
+            "Masters in Speech and Language Therapy, University of Dhaka",
+        ],
+        experience: "8+ years at Therapy Station",
+        photo: "/specialists/songita-hossain-sithi.jpg",
+    },
 ];
 
 /* ─── physiotherapists ─────────────────────────────────────── */

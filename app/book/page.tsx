@@ -37,22 +37,30 @@ const FORMSPREE_ENDPOINT = 'https://formspree.io/f/YOUR_FORM_ID';
 
 const schema = z.object({
   name: z.string().min(2, 'Please enter your full name'),
-  age: z.coerce
-    .number({ invalid_type_error: 'Please enter your age' })
-    .min(1, 'Please enter a valid age')
-    .max(120, 'Please enter a valid age'),
-  gender: z.string().min(1, 'Please select a gender'),
+  age: z.preprocess(
+    (val) => (val === '' || val === undefined ? undefined : Number(val)),
+    z
+      .number()
+      .min(1, 'Please enter a valid age')
+      .max(120, 'Please enter a valid age')
+      .optional()
+  ),
+  gender: z.string().optional(),
   phone: z
     .string()
     .min(7, 'Please enter a valid phone number')
     .regex(/^[\d\s+\-()]+$/, 'Phone number contains invalid characters'),
-  email: z.string().email('Please enter a valid email address'),
+  email: z
+    .string()
+    .email('Please enter a valid email address')
+    .optional()
+    .or(z.literal('')),
   whatsapp: z
     .string()
     .regex(/^[\d\s+\-()]*$/, 'WhatsApp number contains invalid characters')
     .optional()
     .or(z.literal('')),
-  preferred_date: z.string().min(1, 'Please select a preferred date'),
+  preferred_date: z.string().optional(),
 });
 
 type FormData = z.infer<typeof schema>;
@@ -257,7 +265,7 @@ export default function BookPage() {
                           render={({ field }) => (
                             <FormItem>
                               <FormLabel className="text-[13px] font-semibold">
-                                Age *
+                                Age
                               </FormLabel>
                               <FormControl>
                                 <Input
@@ -278,7 +286,7 @@ export default function BookPage() {
                           render={({ field }) => (
                             <FormItem>
                               <FormLabel className="text-[13px] font-semibold">
-                                Gender *
+                                Gender
                               </FormLabel>
                               <Select
                                 onValueChange={field.onChange}
@@ -350,7 +358,7 @@ export default function BookPage() {
                         render={({ field }) => (
                           <FormItem>
                             <FormLabel className="text-[13px] font-semibold">
-                              Email Address *
+                              Email Address
                             </FormLabel>
                             <FormControl>
                               <Input
@@ -371,7 +379,7 @@ export default function BookPage() {
                         render={({ field }) => (
                           <FormItem>
                             <FormLabel className="text-[13px] font-semibold">
-                              Preferred Date *
+                              Preferred Date
                             </FormLabel>
                             <FormControl>
                               <Input type="date" {...field} />
