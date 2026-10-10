@@ -76,9 +76,9 @@ interface Physio {
 }
 
 const physios: Physio[] = [
-  { name: 'Mahbub Hasan Apu', qualification: 'BPT — SCHS (DU), 2023', photo: '/specialists/mahbub-hasan-apu.jpg' },
+  { name: 'Mahbub Hasan Apu', qualification: 'BPT — SCHS (DU), 2023', photo: '/specialists/mahbub-hasan-apu.jpeg' },
   { name: 'Sayeda Humaira Haque', qualification: 'BPT — NITOR (DU), 2025', photo: '/specialists/sayeda-humaira-haque.jpg' },
-  { name: 'Md. Selim Reza', qualification: 'BPT — SCHS (DU), 2023', photo: '/specialists/md-selim-reza.jpg' },
+  // { name: 'Md. Selim Reza', qualification: 'BPT — SCHS (DU), 2023', photo: '/specialists/md-selim-reza.jpg' },
 ];
 
 /* ─── page ─────────────────────────────────────────────────── */
