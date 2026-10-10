@@ -81,6 +81,17 @@ const physios: Physio[] = [
   // { name: 'Md. Selim Reza', qualification: 'BPT — SCHS (DU), 2023', photo: '/specialists/md-selim-reza.jpg' },
 ];
 
+/* Grid adapts to how many physiotherapists are listed, so a partial
+   row never looks like an accidental gap. */
+const PHYSIO_GRID: Record<number, { cols: string; maxW: string }> = {
+  1: { cols: 'sm:grid-cols-1', maxW: 'max-w-[320px]' },
+  2: { cols: 'sm:grid-cols-2', maxW: 'max-w-[680px]' },
+  3: { cols: 'sm:grid-cols-3', maxW: 'max-w-[1200px]' },
+  4: { cols: 'sm:grid-cols-2', maxW: 'max-w-[680px]' },
+};
+const physioGrid =
+  PHYSIO_GRID[physios.length] ?? { cols: 'sm:grid-cols-3', maxW: 'max-w-[1200px]' };
+
 /* ─── page ─────────────────────────────────────────────────── */
 
 export default function SpecialistsPage() {
@@ -250,7 +261,7 @@ export default function SpecialistsPage() {
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, margin: '-60px' }}
-            className="grid grid-cols-1 sm:grid-cols-3 gap-6"
+            className={`grid grid-cols-1 ${physioGrid.cols} gap-6 mx-auto ${physioGrid.maxW}`}
           >
             {physios.map(({ name, qualification, photo }) => (
               <motion.div
